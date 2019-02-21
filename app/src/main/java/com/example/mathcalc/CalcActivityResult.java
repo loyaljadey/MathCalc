@@ -52,6 +52,7 @@ public class CalcActivityResult extends AppCompatActivity {
             @Override
             public void onResponse(Call<CalculateResponse> call, Response<CalculateResponse> response) {
                 String result = response.body().getResult();
+                Log.d("ENQUEUE",result);
                 resultTextView.setText(result);
             }
 
