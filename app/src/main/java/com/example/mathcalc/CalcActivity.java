@@ -14,6 +14,7 @@ public class CalcActivity extends AppCompatActivity {
     private EditText operationEditText;
     private EditText expressionEditText;
     private Button calculate;
+    private Button help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,14 @@ public class CalcActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalcActivity.this, CalcActivityHelp.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void wireWidgets() {
@@ -38,5 +47,6 @@ public class CalcActivity extends AppCompatActivity {
         operationEditText = findViewById(R.id.editText_calcActivity_operation);
         expressionEditText = findViewById(R.id.editText_calcActivity_expression);
         calculate = findViewById(R.id.button_calcActivity_calculate);
+        help = findViewById(R.id.button_calcActivity_help);
     }
 }
