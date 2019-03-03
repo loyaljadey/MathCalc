@@ -6,12 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".CalcActivityHelp">
 
+    <Button
+        android:id="@+id/button_integrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/integrate"
+        app:layout_constraintBottom_toTopOf="@+id/button_area"
+        app:layout_constraintEnd_toStartOf="@+id/button_zeroes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_simplify" />
+
+    <Button
+        android:id="@+id/button_zeroes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeroes"
+        app:layout_constraintBottom_toTopOf="@+id/button_cosine"
+        app:layout_constraintEnd_toStartOf="@+id/button_tangentLine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_integrate"
+        app:layout_constraintTop_toBottomOf="@+id/button_factor" />
+
+    <Button
+        android:id="@+id/button_tangentLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tangent_line"
+        app:layout_constraintBottom_toTopOf="@+id/button_sine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_zeroes"
+        app:layout_constraintTop_toBottomOf="@+id/button_derive" />
+
+    <Button
+        android:id="@+id/button_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/area_under_curve"
+        app:layout_constraintBottom_toTopOf="@+id/button_tangent"
+        app:layout_constraintEnd_toStartOf="@+id/button_cosine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_integrate" />
+
+    <Button
+        android:id="@+id/button_derive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/derive"
+        app:layout_constraintBottom_toTopOf="@+id/button_tangentLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_factor"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CalcActivityHelp_instruct" />
+
     <TextView
         android:id="@+id/textView_header"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="These are the possible methods of the calculator"
+        android:text="@string/header"
         android:textSize="36sp"
         android:typeface="normal"
         app:fontFamily="cursive"
@@ -22,29 +77,128 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_calcActivityHelp_method"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Simplify: simplify: equation \n Factor: factor: equation \n Derive: derive: equation \n Integrate: integrate: equation \n Find 0's: zeroes: equation \n Find Tangent: tangent: x-pos|equation \n Area Under Curve: area: x-left:x-right|equation \n Cosine: cos: value \n Sine: sin: value \n Tangent: tan: value \n Inverse Cosine: arccos: value \n Inverse Sine: arcsin: value \n Inverse Tangent: arctan: value \n Absolute Value: abs: value \n Logarithm: log: value"
-        android:textSize="18sp"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CalcActivityHelp_instruct" />
-
-    <TextView
         android:id="@+id/textView_CalcActivityHelp_instruct"
-        android:layout_width="wrap_content"
+        android:layout_width="328dp"
         android:layout_height="wrap_content"
-        android:text="Operation: What To Type: Equation"
+        android:gravity="center_horizontal"
+        android:text="@string/instruct"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_calcActivityHelp_method"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/button_derive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_header" />
+
+    <Button
+        android:id="@+id/button_simplify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simplify"
+        app:layout_constraintBottom_toTopOf="@+id/button_integrate"
+        app:layout_constraintEnd_toStartOf="@+id/button_factor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CalcActivityHelp_instruct" />
+
+    <Button
+        android:id="@+id/button_factor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/factor"
+        app:layout_constraintBottom_toTopOf="@+id/button_zeroes"
+        app:layout_constraintEnd_toStartOf="@+id/button_derive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_simplify"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CalcActivityHelp_instruct" />
+
+    <Button
+        android:id="@+id/button_cosine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cosine"
+        app:layout_constraintBottom_toTopOf="@+id/button_inverseCosine"
+        app:layout_constraintEnd_toStartOf="@+id/button_sine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_area"
+        app:layout_constraintTop_toBottomOf="@+id/button_zeroes" />
+
+    <Button
+        android:id="@+id/button_sine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sine"
+        app:layout_constraintBottom_toTopOf="@+id/button_inverseSine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_cosine"
+        app:layout_constraintTop_toBottomOf="@+id/button_tangentLine" />
+
+    <Button
+        android:id="@+id/button_tangent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tangent"
+        app:layout_constraintBottom_toTopOf="@+id/button_inverseTangent"
+        app:layout_constraintEnd_toStartOf="@+id/button_inverseCosine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_area" />
+
+    <Button
+        android:id="@+id/button_inverseCosine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arccos"
+        app:layout_constraintBottom_toTopOf="@+id/button_absoluteValue"
+        app:layout_constraintEnd_toStartOf="@+id/button_inverseSine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_tangent"
+        app:layout_constraintTop_toBottomOf="@+id/button_cosine" />
+
+    <Button
+        android:id="@+id/button_inverseSine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arcsin"
+        app:layout_constraintBottom_toTopOf="@+id/button_log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_inverseCosine"
+        app:layout_constraintTop_toBottomOf="@+id/button_sine" />
+
+    <Button
+        android:id="@+id/button_inverseTangent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arctan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_absoluteValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_tangent" />
+
+    <Button
+        android:id="@+id/button_absoluteValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/absolute_value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_log"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_inverseTangent"
+        app:layout_constraintTop_toBottomOf="@+id/button_inverseCosine" />
+
+    <Button
+        android:id="@+id/button_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_absoluteValue"
+        app:layout_constraintTop_toBottomOf="@+id/button_inverseSine" />
 
 
 </android.support.constraint.ConstraintLayout>

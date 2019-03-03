@@ -11,7 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CalcActivityHelp"></activity>
+        <activity android:name=".Logarithm"></activity>
+        <activity android:name=".AbsoluteValue" />
+        <activity android:name=".InverseTangent" />
+        <activity android:name=".InverseSine" />
+        <activity android:name=".InverseCosine" />
+        <activity android:name=".Tangent" />
+        <activity android:name=".Sine" />
+        <activity android:name=".Cosine" />
+        <activity android:name=".AreaUnderCurve" />
+        <activity android:name=".FindTangentLine" />
+        <activity android:name=".FindZeros" />
+        <activity android:name=".Integrate" />
+        <activity android:name=".Derive" />
+        <activity android:name=".Factor" />
+        <activity android:name=".Simplify" />
+        <activity android:name=".CalcActivityHelp" />
         <activity android:name=".CalcActivityResult" />
         <activity android:name=".CalcActivity">
             <intent-filter>

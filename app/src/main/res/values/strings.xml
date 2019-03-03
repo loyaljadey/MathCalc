@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">MathCalc</string>
+    <string name="integrate">Integrate</string>
+    <string name="zeroes">Zeroes</string>
+    <string name="tangent_line">Tangent Line</string>
+    <string name="area_under_curve">Area Under Curve</string>
+    <string name="derive">Derive</string>
+    <string name="header">These are the possible methods of the calculator</string>
+    <string name="instruct">Click on any method button to see an example of how to input the method</string>
+    <string name="simplify">Simplify</string>
+    <string name="factor">Factor</string>
+    <string name="cosine">Cosine</string>
+    <string name="sine">Sine</string>
+    <string name="tangent">Tangent</string>
+    <string name="arccos">Arccos</string>
+    <string name="arcsin">Arcsin</string>
+    <string name="arctan">Arctan</string>
+    <string name="absolute_value">Absolute Value</string>
+    <string name="log">Log</string>
+    <string name="hint">Operation</string>
+    <string name="title">Newton Math Calculator</string>
+    <string name="expression">Expression</string>
+    <string name="calculate">Calculate</string>
+    <string name="help">Help</string>
 </resources>
