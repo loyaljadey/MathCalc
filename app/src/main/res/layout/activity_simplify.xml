@@ -6,4 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".Simplify">
 
+    <TextView
+        android:id="@+id/textView_simplify_header"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/simplify"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_simplify_explain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_simplify_explain"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="To do any simple calculation, such as adding, subtracting, multiplying, dividing, and simplifying fractions, you can use the simplify operation."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_header" />
+
+    <TextView
+        android:id="@+id/textView_simplify_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="In the operation slot, type 'simplify'."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_explain" />
+
+    <TextView
+        android:id="@+id/textView_simplify_add"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:text="How to add numbers:"
+        app:layout_constraintEnd_toStartOf="@+id/textView_simplify_addexplain"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_operation" />
+
+    <TextView
+        android:id="@+id/textView_simplify_addexplain"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="For example, if you wanted to add 2 to 6, then type '2+6' in the expression slot."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_simplify_add"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_operation" />
+
+    <TextView
+        android:id="@+id/textView_simplify_subtract"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:gravity="center_horizontal"
+        android:text="How to subtract numbers:"
+        app:layout_constraintEnd_toStartOf="@+id/textView_simplify_subtractexplain"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_add" />
+
+    <TextView
+        android:id="@+id/textView_simplify_subtractexplain"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="For example, if you wanted to subtract 8 and 3, then type '8-3' in the expression slot."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_addexplain" />
+
+    <TextView
+        android:id="@+id/textView_simplify_multiply"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="How to multiply numbers:"
+        app:layout_constraintEnd_toStartOf="@+id/textView_simplify_multiplyexplain"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_subtract" />
+
+    <TextView
+        android:id="@+id/textView_simplify_multiplyexplain"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="For example, if you wanted to multiply 7 and 9, then type '7*9' in the expression slot."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_subtractexplain" />
+
+    <TextView
+        android:id="@+id/textView_simplify_divide"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="96dp"
+        android:gravity="center_horizontal"
+        android:text="How to divide numbers:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_multiply" />
+
+    <TextView
+        android:id="@+id/textView_simplify_divideexplain"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="For example, if you wanted to divide 6 and 3, then type '6/3' in the expression slot. The division will always return a simplified fraction or integer."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toEndOf="@+id/textView_simplify_divide"
+        app:layout_constraintTop_toBottomOf="@+id/textView_simplify_multiplyexplain" />
+
 </android.support.constraint.ConstraintLayout>

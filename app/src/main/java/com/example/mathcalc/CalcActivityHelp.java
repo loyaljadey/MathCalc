@@ -18,6 +18,7 @@ public class CalcActivityHelp extends AppCompatActivity {
         setContentView(R.layout.activity_calc_help);
         wireWidgets();
 
+        //onclick to intent for all the methods
         simplify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,6 +124,7 @@ public class CalcActivityHelp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     private void wireWidgets() {
