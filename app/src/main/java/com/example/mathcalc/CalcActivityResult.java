@@ -39,6 +39,7 @@ public class CalcActivityResult extends AppCompatActivity {
     }
 
     private void calculateExpression(String operation, String expression) {
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://newton.now.sh/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -46,21 +47,39 @@ public class CalcActivityResult extends AppCompatActivity {
 
         CalculateService service = retrofit.create(CalculateService.class);
 
-        Call<CalculateResponse> calculateResponseCall = service.calculateMath(operation, expression);
+        if(operation.equals("zeroes")) {
+            Call<CalculateResponseZeroes> calculateResponseZeroesCall = service.calculateZeros(operation, expression);
+            calculateResponseZeroesCall.enqueue(new Callback<CalculateResponseZeroes>() {
+                @Override
+                public void onResponse(Call<CalculateResponseZeroes> call, Response<CalculateResponseZeroes> response) {
+                    String result = response.body().getResult().toString();
+                    Log.d("ENQUEUE", result);
+                    resultTextView.setText(result);
+                }
 
-        calculateResponseCall.enqueue(new Callback<CalculateResponse>() {
-            @Override
-            public void onResponse(Call<CalculateResponse> call, Response<CalculateResponse> response) {
-                String result = response.body().getResult();
-                Log.d("ENQUEUE",result);
-                resultTextView.setText(result);
-            }
+                @Override
+                public void onFailure(Call<CalculateResponseZeroes> call, Throwable t) {
+                    Log.d("ENQUEUE", "onFailure:" + t.getMessage() + " " + call.request().body());
+                }
+            });
+        }
+        else{
+            Call<CalculateResponse> calculateResponseCall = service.calculateMath(operation, expression);
+            calculateResponseCall.enqueue(new Callback<CalculateResponse>() {
+                @Override
+                public void onResponse(Call<CalculateResponse> call, Response<CalculateResponse> response) {
+                    String result = response.body().getResult();
+                    Log.d("ENQUEUE", result);
+                    resultTextView.setText(result);
+                }
 
-            @Override
-            public void onFailure(Call<CalculateResponse> call, Throwable t) {
-                Log.d("ENQUEUE","onFailure:"+ t.getMessage());
-            }
-        });
+                @Override
+                public void onFailure(Call<CalculateResponse> call, Throwable t) {
+                    Log.d("ENQUEUE", "onFailure:" + t.getMessage());
+                }
+            });
+        }
+
 
     }
 

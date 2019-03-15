@@ -12,6 +12,13 @@ public class Factor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_factor);
+        wireWidgets();
+    }
 
+    private void wireWidgets() {
+        header = findViewById(R.id.textView_factor_header);
+        explain = findViewById(R.id.textView_factor_explain);
+        operation = findViewById(R.id.textView_factor_operation);
+        body = findViewById(R.id.textView_factor_body);
     }
 }

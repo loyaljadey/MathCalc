@@ -77,9 +77,6 @@ public class CalcActivity extends AppCompatActivity {
                     ifMatch = true;
                     break;
                 }
-                else{
-                    ifMatch = false;
-                }
             }
         }
         return ifMatch;

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Derive">
+    tools:context=".FindZeroes">
 
     <TextView
-        android:id="@+id/textView_derive_header"
+        android:id="@+id/textView_findzeroes_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,16 +17,16 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="36dp"
         android:gravity="center_horizontal"
-        android:text="Derive"
+        android:text="Find Zeroes"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_derive_explain"
+        app:layout_constraintBottom_toTopOf="@+id/textView_findzeroes_explain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView_derive_explain"
+        android:id="@+id/textView_findzeroes_explain"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -35,13 +35,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
-        android:text="To take the derivative of any equation, you can use the derive operation. This operation will return the derivative of the expression."
+        android:text="To find the zeroes any equation, you can use the find zeroes operation. This operation will return the x-position of the zeros."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_derive_header" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_findzeroes_header" />
 
     <TextView
-        android:id="@+id/textView_derive_operation"
+        android:id="@+id/textView_findzeroes_operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,13 +50,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
-        android:text="In the operation slot, type 'derive'."
+        android:text="In the operation slot, type 'zeroes'."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_derive_explain" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_findzeroes_explain" />
 
     <TextView
-        android:id="@+id/textView_derive_body"
+        android:id="@+id/textView_findzeroes_body"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -66,11 +66,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="380dp"
         android:gravity="center_horizontal"
-        android:text="For example, if you want to derive x^2+2x+1, then type 'x^2+2x+1' in the expression slot. This will return '2 x + 2'."
+        android:text="For example, if you want to find the zeroes of x^2+4x+3, then type 'x^2+4x+3' in the expression slot. This will return '[-1, -3]'."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_derive_operation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_findzeroes_operation"
         app:layout_constraintVertical_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>

@@ -21,7 +21,7 @@
         <activity android:name=".Cosine" />
         <activity android:name=".AreaUnderCurve" />
         <activity android:name=".FindTangentLine" />
-        <activity android:name=".FindZeros" />
+        <activity android:name=".FindZeroes" />
         <activity android:name=".Integrate" />
         <activity android:name=".Derive" />
         <activity android:name=".Factor" />

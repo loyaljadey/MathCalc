@@ -11,4 +11,9 @@ public interface CalculateService {
     Call<CalculateResponse> calculateMath(
             @Path("operation") String operation,
             @Path("expression") String expression);
+
+    @GET ("{operation}/{expression}")
+    Call<CalculateResponseZeroes> calculateZeros(
+            @Path("operation") String operation,
+            @Path("expression") String expression);
 }

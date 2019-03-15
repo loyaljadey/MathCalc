@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".AreaUnderCurve">
 
+    <TextView
+        android:id="@+id/textView_areaUnderCurve_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="36dp"
+        android:gravity="center_horizontal"
+        android:text="Area Under Curve"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_areaUnderCurve_explain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_areaUnderCurve_explain"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="To find the area under a curve of any equation, you can use the area under curve operation. This operation will return the area under the curves."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_areaUnderCurve_header" />
+
+    <TextView
+        android:id="@+id/textView_areaUnderCurve_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="In the operation slot, type 'area'."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_areaUnderCurve_explain" />
+
+    <TextView
+        android:id="@+id/textView_areaUnderCurve_body"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="380dp"
+        android:gravity="center_horizontal"
+        android:text="For example, if you want to find the area under the curve x^3 from 2-4, then type '2:4|x^3' in the expression slot. First type the left x-coordinate bound, then put a colon, then put the right x-coordinate bound, then put a vertical bar, then put the equation of the curve that you want to find the area of. This will return '60'."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_areaUnderCurve_operation"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
